@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* font */
+       @font-face {
+            font-family: 'Humanbumsuk';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            color: #fff;
+        }
+        body {
+            font-family: 'Humanbumsuk';
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-image: url("./pictures/pinksky.jpg");
+        }
+        .container {
+            width: 390px;
+            height: 100%;
+            background-color: black;
+        }
+        .photos {
+            margin-top: 30px;
+        }
+        .photo-frame {
+            background-color: #fff;
+            margin: 15px 20px;
+            height: 200px;
+            background-size: cover;
+            position: relative;
+            cursor: pointer;
+        }
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .f-title {
+            font-size: 25px;
+            font-weight: 900;
+            color: white;
+        }
+        .f-date {
+            font-size: 15px;
+            font-weight: 500;
+            color: white;
+        }
+
+        /*insert image
+            background-image: urll("");
+        */
+        #image1 {}
+        #image2 {}
+        #image3 {}
+        #image4 {}
+
+
+        .photo-description {
+            color: white;
+            background-color: black;
+
+            width: fit-content;
+            padding: 0 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 0;
+            transform: tramslate(-50%);
+            left: 50%;
+            opacity: 0;
+        }
+
+        /* insert video
+        .video {
+            width: 100%;
+            height: 100%;
+        } */
+
+
+        /* mouse over */
+        .showText {
+            opacity: 1;
+            transition: 0.5s linear;
+        }
+
+        .hideText {
+            opacity: 0;
+        }
+    </style>
+    
+    <!-- linked javaScript -->
+    <script type="text/javaScript" defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="photos">
+            <div 
+                id="image1" class="photo-frame" 
+                onmouseover="showText(1)"
+                onmouseout="hideText(1)"
+                onclick="alertText(1)">
+                <span id="desc1" class="photo-description">
+                    photo1
+                </span>
+            </div>
+            <div 
+                id="image2" class="photo-frame" 
+                onmouseover="showText(2)"
+                onmouseout="hideText(2)"
+                onclick="alertText(2)">
+                <sapn id="desc2" class="photo-description">
+                    photo2
+                </sapn>
+            </div>
+            <div 
+                id="image3" class="photo-frame" 
+                onmouseover="showText(3)"
+                onmouseout="hideText(3)"
+                onclick="alertText(3)">
+                <span id="desc3" class="photo-description">
+                    phtoto3
+                </span>
+            </div>
+            <div 
+                id="image4" class="photo-frame" 
+                onmouseover="showText(4)"
+                onmouseout="hideText(4)"
+                onclick="alertText(4)">
+                <span id="desc4" class="photo-description">
+                    photo4
+                </span>
+            </div>
+            <!-- insert video
+            <div class="photo-frame">
+                <iframe class="video"
+                    src=""
+                    frameborder="0"
+            </div> -->
+
+        </div>
+        <div class="footer">
+            <p class="f-title"> Be Strong! </p>
+            <p class="f-date"> 2023.02.25 </p>
+        </div>
+    </div>
+</body>
+</html>
